@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portafolio - Martín Zanandrea</title>
+
+    <!-- TailwindCSS para estilos modernos y responsivos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Enlace a estilos personalizados -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="text-white">
+    <header class="bg-black bg-opacity-70 py-4 px-0 flex items-center fixed w-full z-20 shadow-md">
+        <div class="flex-1 pl-4">
+            <h1 class="text-2xl sm:text-3xl font-bold">Martín Zanandrea</h1>
+            <p class="text-sm sm:text-base">Estudiante de Licenciatura en Sistemas</p>
+        </div>
+        <nav class="flex items-center pr-4">
+            <!-- Botón hamburguesa (solo móvil) -->
+            <button id="menuBtn" class="sm:hidden text-white focus:outline-none ml-auto" aria-label="Abrir menú">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            <ul id="navMenu" class="hidden sm:flex flex-col sm:flex-row space-y-4 sm:space-y-0 space-x-0 sm:space-x-8 text-sm sm:text-base absolute sm:static top-20 right-6 bg-black bg-opacity-90 rounded-lg p-6 sm:p-0 z-30 transition-all duration-300">
+                <li><a href="#about" class="hover:text-gray-300 transition">Sobre Mí</a></li>
+                <li><a href="#skills" class="hover:text-gray-300 transition">Habilidades</a></li>
+                <li><a href="#projects" class="hover:text-gray-300 transition">Proyectos</a></li>
+                <li><a href="#contact" class="hover:text-gray-300 transition">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+<!-- ...existing code... -->
+
+    <!-- Contenido principal -->
+    <main class="pt-24 px-4 sm:px-8 max-w-7xl mx-auto">
+        <!-- Sobre Mí -->
+        <section id="about" class="py-16 sm:py-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <!-- Imagen de perfil -->
+                <div class="flex justify-center md:justify-start">
+                    <img
+                        src="https://placehold.co/400x400/png/bg=2C2C2C?text=Martín+Zanandrea"
+                        alt="Foto de Martín Zanandrea, estudiante de licenciatura en sistemas, joven con cabello corto y sonrisa amable en fondo oscuro moderno"
+                        class="rounded-full shadow-lg w-48 h-48 sm:w-64 sm:h-64 object-cover"
+                    />
+                </div>
+                <!-- Texto presentación -->
+                <div>
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-6">Sobre Mí</h2>
+                    <p class="text-lg sm:text-xl mb-4 leading-relaxed">
+                        Soy Martín Zanandrea, estudiante de Licenciatura en Sistemas. Actualmente curso desarrollo web, aprendiendo tecnologías como Bootstrap, HTML, CSS, Tailwind y JavaScript. También tengo conocimientos sólidos en back-end con Java, Python y MySQL, enfocándome en crear aplicaciones escalables y eficientes.
+                    </p>
+                    <p class="text-base sm:text-lg leading-relaxed">
+                        Me apasiona el desarrollo full-stack, combinando front-end moderno con back-end robusto para construir soluciones completas. Busco oportunidades para crecer profesionalmente en el ámbito de la programación.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Habilidades -->
+        <section id="skills" class="py-16 sm:py-20 bg-black bg-opacity-40 rounded-lg px-4 sm:px-8">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">Habilidades</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg project-card">
+                    <h3 class="text-2xl font-semibold mb-4">Front-End</h3>
+                    <ul class="list-disc list-inside text-base sm:text-lg">
+                        <li>HTML5 & CSS3</li>
+                        <li>Bootstrap</li>
+                        <li>TailwindCSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg project-card">
+                    <h3 class="text-2xl font-semibold mb-4">Back-End</h3>
+                    <ul class="list-disc list-inside text-base sm:text-lg">
+                        <li>Java (Spring Boot)</li>
+                        <li>Python (Django, Flask)</li>
+                        <li>APIs RESTful</li>
+                        <li>Desarrollo de servicios web</li>
+                    </ul>
+                </div>
+                <div class="bg-white bg-opacity-10 p-6 rounded-lg project-card">
+                    <h3 class="text-2xl font-semibold mb-4">Databases & Herramientas</h3>
+                    <ul class="list-disc list-inside text-base sm:text-lg">
+                        <li>MySQL</li>
+                        <li>Git & GitHub</li>
+                        <li>Visual Studio Code</li>
+                        <li>Optimización y buenas prácticas</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proyectos -->
+        <section id="projects" class="py-16 sm:py-20">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">Proyectos</h2>
+            <div class="slider max-w-5xl mx-auto">
+                <div class="slider-track" id="sliderTrack">
+                    <!-- Proyecto 1: Front-End -->
+                    <div class="w-full flex-shrink-0 px-4">
+                        <div class="bg-white bg-opacity-10 p-6 rounded-lg project-card">
+                            <img
+                                src="https://placehold.co/800x400/png/bg=2C2C2C?text=Proyecto+Bootstrap"
+                                alt="Captura de pantalla de proyecto Bootstrap: sitio web responsive con componentes interactivos en colores oscuros"
+                                class="w-full h-48 sm:h-64 object-cover rounded mb-4"
+                            />
+                            <h3 class="text-2xl font-semibold mb-2">Proyecto Bootstrap</h3>
+                            <p class="mb-4 text-base sm:text-lg">
+                                Sitio web responsive desarrollado con Bootstrap, HTML, CSS y JavaScript, con navegación dinámica y diseño moderno enfocado en experiencia de usuario.
+                            </p>
+                            <a href="#" class="bg-purple-700 py-2 px-4 rounded hover:bg-purple-800 transition inline-block">Ver Proyecto</a>
+                        </div>
+                    </div>
+                    <!-- Proyecto 2: Java con MySQL -->
+                    <div class="w-full flex-shrink-0 px-4">
+                        <div class="bg-white bg-opacity-10 p-6 rounded-lg project-card">
+                            <img
+                                src="https://placehold.co/800x400/png/bg=2C2C2C?text=App+Java+MySQL"
+                                alt="Captura de pantalla de aplicación Java: interfaz de gestión de datos conectada a MySQL con diseño oscuro y funcional"
+                                class="w-full h-48 sm:h-64 object-cover rounded mb-4"
+                            />
+                            <h3 class="text-2xl font-semibold mb-2">Aplicación Gestión de Inventario (Java & MySQL)</h3>
+                            <p class="mb-4 text-base sm:text-lg">
+                                Aplicación de consola en Java que permite gestionar un inventario de productos usando MySQL para persistencia de datos, con consultas CRUD y validaciones.
+                            </p>
+                            <a href="#" class="bg-purple-700 py-2 px-4 rounded hover:bg-purple-800 transition inline-block">Ver Proyecto</a>
+                        </div>
+                    </div>
+                    <!-- Proyecto 3: Python con Django -->
+                    <div class="w-full flex-shrink-0 px-4">
+                        <div class="bg-white bg-opacity-10 p-6 rounded-lg project-card">
+                            <img
+                                src="https://placehold.co/800x400/png/bg=2C2C2C?text=Web+Python+Django"
+                                alt="Captura de pantalla de sitio web Django: plataforma de blogs con Python y base de datos, interfaz usuario en tonos oscuros"
+                                class="w-full h-48 sm:h-64 object-cover rounded mb-4"
+                            />
+                            <h3 class="text-2xl font-semibold mb-2">Plataforma de Blog (Python & Django)</h3>
+                            <p class="mb-4 text-base sm:text-lg">
+                                Sitio web de blogs construido con Python y Django, incluyendo autenticación de usuarios, gestión de posts y optimización de rendimiento.
+                            </p>
+                            <a href="#" class="bg-purple-700 py-2 px-4 rounded hover:bg-purple-800 transition inline-block">Ver Proyecto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Botones slider -->
+            <div class="flex justify-center mt-8 space-x-6">
+                <button id="prevBtn" class="bg-gray-800 py-2 px-5 rounded hover:bg-gray-900 transition text-lg">&lt;</button>
+                <button id="nextBtn" class="bg-gray-800 py-2 px-5 rounded hover:bg-gray-900 transition text-lg">&gt;</button>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contact" class="py-16 sm:py-20 bg-gray-900 bg-opacity-50 rounded-lg px-4 sm:px-8 max-w-3xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-8">Contacto</h2>
+            <p class="text-center text-lg mb-8">¿Quieres contactarme? Escríbeme a:</p>
+            <p class="text-center text-purple-400 font-semibold mb-12">martinzanandrea09@gmail.com</p>
+            <form class="space-y-6" onsubmit="event.preventDefault(); alert('Gracias por tu mensaje!');">
+                <input
+                    type="text"
+                    placeholder="Tu Nombre"
+                    required
+                    class="w-full p-3 rounded bg-gray-900 border border-gray-700 focus:border-purple-500 focus:outline-none text-white"
+                />
+                <input
+                    type="email"
+                    placeholder="Tu Email"
+                    required
+                    class="w-full p-3 rounded bg-gray-900 border border-gray-700 focus:border-purple-500 focus:outline-none text-white"
+                />
+                <textarea
+                    placeholder="Tu Mensaje"
+                    rows="5"
+                    required
+                    class="w-full p-3 rounded bg-gray-900 border border-gray-700 focus:border-purple-500 focus:outline-none text-white"
+                ></textarea>
+                <button type="submit" class="w-full bg-purple-700 py-3 rounded hover:bg-purple-800 transition font-semibold text-lg">
+                    Enviar Mensaje
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black bg-opacity-80 py-6 px-6 text-center mt-16">
+    <p>© 2024 Martín Zanandrea. Todos los derechos reservados.</p>
+    <div class="mt-4 space-x-6 flex justify-center items-center">
+        <a href="#" class="hover:text-gray-300 transition flex items-center" aria-label="LinkedIn">
+            <!-- Icono LinkedIn -->
+            <svg class="w-6 h-6 mr-2 fill-current" viewBox="0 0 25 25">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.026-3.063-1.867-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.563 2.838-1.563 3.034 0 3.595 2 3.595 4.594v5.602z"/>
+            </svg>
+            LinkedIn
+        </a>
+        <a href="#" class="hover:text-gray-300 transition flex items-center" aria-label="GitHub">
+            <!-- Icono GitHub -->
+            <svg class="w-6 h-6 mr-2 fill-current" viewBox="0 0 25 25">
+                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.93 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.371.823 1.102.823 2.222v3.293c0 .322.218.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+            </svg>
+            GitHub
+        </a>
+        <a href="#" class="hover:text-gray-300 transition flex items-center" aria-label="Twitter">
+            <!-- Icono Twitter -->
+            <svg class="w-6 h-6 mr-2 fill-current" viewBox="0 0 25 25">
+                <path d="M24 4.557a9.93 9.93 0 0 1-2.828.775 4.932 4.932 0 0 0 2.165-2.724c-.951.564-2.005.974-3.127 1.195a4.916 4.916 0 0 0-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161c-.542.929-.855 2.01-.855 3.17 0 2.188 1.115 4.117 2.823 5.254a4.904 4.904 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.936 4.936 0 0 1-2.224.084c.627 1.956 2.444 3.377 4.6 3.418A9.867 9.867 0 0 1 0 21.543a13.94 13.94 0 0 0 7.548 2.209c9.058 0 14.009-7.513 14.009-14.009 0-.213-.005-.425-.014-.636A10.025 10.025 0 0 0 24 4.557z"/>
+            </svg>
+            Twitter
+        </a>
+    </div>
+    </footer>
+
+    <!-- Script externo -->
+    <script src="script.js"></script>
+    <script>
+        // Menú colapsable
+        const menuBtn = document.getElementById('menuBtn');
+        const navMenu = document.getElementById('navMenu');
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('hidden');
+        });
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 640) {
+                navMenu.classList.remove('hidden');
+            } else {
+                navMenu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

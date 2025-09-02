@@ -1,0 +1,66 @@
+/* Fuente y fondo general con colores más oscuros */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    /* Gradiente oscuro para fondo */
+    background: linear-gradient(135deg, #1E1E1E 0%, #2C2C2C 50%, #3B3B3B 100%);
+    min-height: 100vh;
+    color: #F0F0F0; /* Texto más claro para contraste en fondo oscuro */
+}
+
+/* Tarjetas de proyectos con animación hover y colores oscuros */
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.05); /* Fondo semi-transparente más sutil */
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Sombra más intensa para efecto oscuro */
+}
+
+/* Slider */
+.slider {
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+/* Responsividad */
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 640px) {
+    header nav ul {
+        flex-direction: column;
+        gap: 12px;
+    }
+    header nav ul li {
+        margin: 0;
+    }
+    .slider-track {
+        flex-direction: column;
+    }
+    .project-card {
+        padding: 1rem; /* Reducir padding en móviles */
+    }
+}
+
+/* Para tablets */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .slider-track {
+        flex-wrap: nowrap;
+    }
+    .project-card:hover {
+        transform: translateY(-6px); /* Ajuste sutil en tablets */
+    }
+}
+
+/* Ajustes para que el slider no se desborde en móviles */
+.slider-track > div {
+    min-width: 100%;
+    box-sizing: border-box;
+}
